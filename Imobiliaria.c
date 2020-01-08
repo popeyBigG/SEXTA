@@ -42,11 +42,11 @@ menu1(void) {
 
     switch (escolha) {
         case 1:
-               negocio = "Compra";
+               negocio == "Compra";
                menuTipo();
                break;
         case 2:
-               negocio = "Venda";
+               negocio == "Venda";
                menuTipo();
                break;
         default: (printf("\n\nOpção inválida! Por favor, selecione uma opção correta.\n\n\n\n")); menu1(); break;
@@ -75,25 +75,25 @@ printf(R"EOF(
     
     case 'M':
     case 'm':
-        tipo = "Moradia";
-        valorm2 = moradia;
+        tipo == "Moradia";
+        valorm2 == moradia;
         localizacao();
         break;
     case 'T':
     case 't':
-        tipo = "Terreno";
+        tipo == "Terreno";
         valorm2 = terreno;
         localizacao();
         break;
     case 'Q':
     case 'q':
-        tipo = "Quinta";
+        tipo == "Quinta";
         valorm2 = quinta;
         localizacao();
         break;
     case 'A':
     case 'a':
-        tipo = "Armazém";
+        tipo == "Armazém";
         valorm2 = armazem;
         localizacao();
         break;
@@ -127,17 +127,17 @@ printf(R"EOF(
     
     case 'P':
     case 'p':
-        loc = "PDL";
+        loc == "PDL";
         calcArea();
         break;
     case 'L':
     case 'l':
-        loc = "LAGOA";
+        loc == "LAGOA";
         calcArea();
         break;
     case 'N':
     case 'n':
-        loc = "NORDESTE";
+        loc == "NORDESTE";
         calcArea();
         break;
     default: (printf("\nOpção inválida! Por favor, selecione uma opção correta.\n")); localizacao(); break;
