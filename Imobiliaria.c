@@ -167,25 +167,21 @@ char loc[256];
 int valorm2;
 double total; */
 
-if (negocio = "Compra" && loc = "PDL") {
+if (negocio == "Compra" && loc == "PDL") {
     desconto = 0.04;
-} else if (negocio = "Venda" && loc = "PDL") {
+} else if (negocio == "Venda" && loc == "PDL") {
     aumento = 0.05;
-} else if (negocio = "Compra" && loc = "LAGOA") {
+} else if (negocio == "Compra" && loc == "LAGOA") {
     desconto = 0.03;
-} else if (negocio = "Venda" && loc = "LAGOA") {
+} else if (negocio == "Venda" && loc == "LAGOA") {
     aumento = 0.02;
-} else if (negocio = "Compra" && loc = "NORDESTE") {
+} else if (negocio == "Compra" && loc == "NORDESTE") {
     desconto = 0.30;
-} else if (negocio = "Venda" && loc = "NORDESTE") {
-    aumento 0.01;
+} else if (negocio == "Venda" && loc == "NORDESTE") {
+    aumento = 0.01;
 }
 
-total = (areaTotal * valorm2) - (areaTotal * valorm2) ;
-
-
-    
-
+total = (areaTotal * valorm2) - (areaTotal * valorm2 * desconto);
 
 
 }
