@@ -10,7 +10,7 @@ char estado_valvula[256];
 int main() {
 
 introduzir_valores();   // Função na linha [36]
-funcao_valvula          // Função na linha [54]
+funcao_valvula();       // Função na linha [54]
 calcular_porcentagem(); // Função na linha [20]
 output_final();         // Função na linha [84]
 
@@ -60,7 +60,7 @@ if (saida < entrada && reservatorio_A >= reservatorio_B) {
 
 } else if (saida > entrada && reservatorio_A >= reservatorio_B) {
     strcpy(estado_valvula, "50% aberta");
-    valor_saida = (saida /2);
+    valor_saida = (saida / 2);
 
 } else if (saida == entrada && reservatorio_A > reservatorio_B) {
     strcpy(estado_valvula, "Totalmente aberta");
