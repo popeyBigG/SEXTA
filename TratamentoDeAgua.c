@@ -9,18 +9,15 @@ char estado_valvula[256];
 
 int main() {
 
-printf("Insira o valor do reservatorio [A]: ");
-scanf("%lf", &reservatorio_A);
+introduzir_valores();   // Função na linha [36]
+funcao_valvula          // Função na linha [54]
+calcular_porcentagem(); // Função na linha [20]
+output_final();         // Função na linha [84]
 
-printf("Insira o valor do reservatorio [B]: ");
-scanf(" %lf", &reservatorio_B);
+return 0;    
+}
 
-printf("Insira o valor do cano [Entrada]: ");
-scanf(" %lf", &entrada);
-
-printf("Insira o valor do cano [Saída]: ");
-scanf(" %lf", &saida);
-
+calcular_porcentagem(void) {
 
 // Calcular porcentagem dos valores nos reservatorios
 porcentagem_reservatorio_A = (reservatorio_A / 100); 
@@ -33,7 +30,28 @@ if (reservatorio_A > reservatorio_B) {
     porcentagem_diferencial_B = (porcentagem_reservatorio_B - porcentagem_reservatorio_A);
 }
 
+}
 
+
+introduzir_valores(void) {
+
+// Input's para determinar valor dos reservatorios e canos
+printf("Insira o valor do reservatorio [A]: ");
+scanf("%lf", &reservatorio_A);
+
+printf("Insira o valor do reservatorio [B]: ");
+scanf(" %lf", &reservatorio_B);
+
+printf("Insira o valor do cano [Entrada]: ");
+scanf(" %lf", &entrada);
+
+printf("Insira o valor do cano [Saída]: ");
+scanf(" %lf", &saida);
+
+}
+
+
+funcao_valvula(void) {
 
 // Comparações para fazer ações conforme os valores
 if (saida < entrada && reservatorio_A >= reservatorio_B) {
@@ -59,10 +77,13 @@ if (saida < entrada && reservatorio_A >= reservatorio_B) {
 } else if (reservatorio_A > reservatorio_B && porcentagem_reservatorio_A > 0.89 && entrada > saida) {
     strcpy(estado_valvula, "Abrir válvula");
     valor_saida = saida;
+}
 
 }
 
-printf("Estado da válvula: %s\nValor saída: %.02lf\n", estado_valvula, valor_saida);
-return 0;    
-}
+output_final(void) {
 
+// Output Final
+printf("\nEstado da válvula: %s\nValor saída: %.02lf\n", estado_valvula, valor_saida);
+
+}
